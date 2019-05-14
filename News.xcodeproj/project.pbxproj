@@ -10,6 +10,9 @@
 		BB0613152289F90400F9160A /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0613142289F90400F9160A /* NewsList.swift */; };
 		BB0D97C722895F1C0005BA56 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D97C622895F1C0005BA56 /* Article.swift */; };
 		BB0D97C9228960190005BA56 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0D97C8228960190005BA56 /* API.swift */; };
+		BB757EAF228B134F00F97300 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB757EAE228B134F00F97300 /* ArticleTableViewCell.swift */; };
+		BB757EB1228B197400F97300 /* MediaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB757EB0228B197400F97300 /* MediaInfo.swift */; };
+		BB757EB3228B19D900F97300 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB757EB2228B19D900F97300 /* Media.swift */; };
 		BBCC1D2B22895CCC00D26CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC1D2A22895CCC00D26CD6 /* AppDelegate.swift */; };
 		BBCC1D2D22895CCC00D26CD6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC1D2C22895CCC00D26CD6 /* MasterViewController.swift */; };
 		BBCC1D2F22895CCC00D26CD6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC1D2E22895CCC00D26CD6 /* DetailViewController.swift */; };
@@ -42,6 +45,9 @@
 		BB0613142289F90400F9160A /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
 		BB0D97C622895F1C0005BA56 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BB0D97C8228960190005BA56 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BB757EAE228B134F00F97300 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		BB757EB0228B197400F97300 /* MediaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfo.swift; sourceTree = "<group>"; };
+		BB757EB2228B19D900F97300 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		BBCC1D2722895CCC00D26CD6 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCC1D2A22895CCC00D26CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBCC1D2C22895CCC00D26CD6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BB757EB4228B2B4900F97300 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB0D97C8228960190005BA56 /* API.swift */,
+				BB0613142289F90400F9160A /* NewsList.swift */,
+				BB757EB0228B197400F97300 /* MediaInfo.swift */,
+				BB757EB2228B19D900F97300 /* Media.swift */,
+				BB0D97C622895F1C0005BA56 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB757EB5228B2B6A00F97300 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC1D4C22895DFF00D26CD6 /* Alamofire+Helpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB757EB6228B2B7C00F97300 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB757EAE228B134F00F97300 /* ArticleTableViewCell.swift */,
+				BBCC1D2C22895CCC00D26CD6 /* MasterViewController.swift */,
+				BBCC1D2E22895CCC00D26CD6 /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BBCC1D1E22895CCC00D26CD6 = {
 			isa = PBXGroup;
 			children = (
@@ -120,17 +156,14 @@
 		BBCC1D2922895CCC00D26CD6 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				BB757EB6228B2B7C00F97300 /* Views */,
+				BB757EB5228B2B6A00F97300 /* Utilities */,
+				BB757EB4228B2B4900F97300 /* Models */,
 				BBCC1D2A22895CCC00D26CD6 /* AppDelegate.swift */,
-				BBCC1D2C22895CCC00D26CD6 /* MasterViewController.swift */,
-				BBCC1D2E22895CCC00D26CD6 /* DetailViewController.swift */,
 				BBCC1D3022895CCC00D26CD6 /* Main.storyboard */,
 				BBCC1D3322895CCC00D26CD6 /* Assets.xcassets */,
 				BBCC1D3522895CCC00D26CD6 /* LaunchScreen.storyboard */,
 				BBCC1D3822895CCC00D26CD6 /* Info.plist */,
-				BBCC1D4C22895DFF00D26CD6 /* Alamofire+Helpers.swift */,
-				BB0D97C622895F1C0005BA56 /* Article.swift */,
-				BB0613142289F90400F9160A /* NewsList.swift */,
-				BB0D97C8228960190005BA56 /* API.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -277,6 +310,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NewsTests/Pods-NewsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
@@ -285,6 +319,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
@@ -325,6 +360,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
@@ -333,6 +369,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
@@ -352,6 +389,9 @@
 				BBCC1D2F22895CCC00D26CD6 /* DetailViewController.swift in Sources */,
 				BB0613152289F90400F9160A /* NewsList.swift in Sources */,
 				BBCC1D2D22895CCC00D26CD6 /* MasterViewController.swift in Sources */,
+				BB757EB3228B19D900F97300 /* Media.swift in Sources */,
+				BB757EAF228B134F00F97300 /* ArticleTableViewCell.swift in Sources */,
+				BB757EB1228B197400F97300 /* MediaInfo.swift in Sources */,
 				BBCC1D2B22895CCC00D26CD6 /* AppDelegate.swift in Sources */,
 				BB0D97C9228960190005BA56 /* API.swift in Sources */,
 				BB0D97C722895F1C0005BA56 /* Article.swift in Sources */,
