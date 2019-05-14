@@ -22,6 +22,7 @@ final class Article {
     var id: Double?
     var orgFacet: [String]?
     var perFacet: [String]?
+    var media: [Media]?
     var publishedDate: String?
     var section: String?
     var source: String?
@@ -29,6 +30,13 @@ final class Article {
     var articleType: ArticleType?
     var url: URL?
     var views: Int?
+    
+    var thumnail: URL? {
+        guard (media?.first?.metadata?.count ?? 0) > 2 else {
+            return nil
+        }
+        return media?.first?.metadata?[1].url
+    }
     
     enum CodingKeys: String, CodingKey {
         case abstract = "abstract"
@@ -42,6 +50,7 @@ final class Article {
         case id = "id"
         case orgFacet = "org_facet"
         case perFacet = "per_facet"
+        case media = "media"
         case publishedDate = "published_date"
         case section = "section"
         case source = "source"
@@ -79,6 +88,7 @@ extension Article: Decodable {
         
         orgFacet = try? values.decode(Array<String>.self, forKey: .orgFacet)
         perFacet = try? values.decode(Array<String>.self, forKey: .perFacet)
+        media = try? values.decode(Array<Media>.self, forKey: .media)
         publishedDate = try? values.decode(String.self, forKey: .publishedDate)
         section = try? values.decode(String.self, forKey: .section)
         source = try? values.decode(String.self, forKey: .source)
